@@ -29,6 +29,7 @@ mobileMenuBtn.addEventListener('click', function() {
 
 mobileMenuClose.addEventListener('click', function() {
     closeMobileMenu();
+    document.body.style.overflow = 'auto';
 });
 
 // Close when clicking overlay

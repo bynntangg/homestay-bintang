@@ -336,6 +336,7 @@ img {
     transition: right 0.3s ease;
     padding: 3rem 2rem 2rem;
     overflow-y: auto;
+    max-height: 100vh;
 }
 
 .mobile-menu.active {
@@ -359,6 +360,9 @@ img {
     color: var(--white);
     font-size: 1.5rem;
     cursor: pointer;
+}
+.mobile-nav-list {
+    padding-bottom: 20px; /* Extra space at bottom */
 }
 
 .mobile-nav-item {
