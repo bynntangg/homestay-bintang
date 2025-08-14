@@ -51,29 +51,33 @@ window.addEventListener('scroll', function() {
     });
 });
 
-// Mobile Menu Toggle
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const mobileMenuClose = document.getElementById('mobileMenuClose');
-const mobileMenu = document.getElementById('mobileMenu');
-
-mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.add('active');
-    document.body.style.overflow = 'hidden';
-});
-
-mobileMenuClose.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
-    document.body.style.overflow = '';
-});
-
-// Close mobile menu when clicking on a link
-const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-mobileNavLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-        document.body.style.overflow = '';
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    
+    // Buka menu mobile
+    mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.add('active');
+        mobileMenuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
     });
-});
+    
+    // Tutup menu mobile
+    function closeMobileMenu() {
+        mobileMenu.classList.remove('active');
+        mobileMenuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
+    mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+    
+    // Tutup menu ketika link diklik
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
 
 // Prevent closing when clicking inside mobile menu
 mobileMenu.addEventListener('click', (e) => {
