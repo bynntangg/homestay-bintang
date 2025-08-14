@@ -34,7 +34,7 @@ body {
     background-color: var(--white);
     overflow-x: hidden;
     line-height: 1.6;
-    padding-top: 80px; /* Untuk mengkompensasi navbar fixed */
+    padding-top: 60px; /* Untuk mengkompensasi navbar fixed */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -185,19 +185,16 @@ img {
     animation: bounce 2s infinite;
 }
 
-/* Navbar Styles */
+/* Perbaikan navbar */
 .navbar-ocean {
+    background-color: #000;
     position: fixed;
-    top: 0;
+    top: 0; /* Pastikan mentok ke atas */
     left: 0;
     right: 0;
-    background: rgba(3, 7, 18, 0.5);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(59, 130, 246, 0.1);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
     z-index: 1000;
-    padding: 0.5rem 0;
+    padding: 10px 0; /* Sesuaikan padding sesuai kebutuhan */
 }
 
 .navbar-ocean.scrolled {
@@ -273,8 +270,15 @@ img {
 }
 
 .nav-link.active {
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.6) 0%, rgba(29, 78, 216, 0.7) 100%);
-    box-shadow: 0 4px 12px rgba(29, 78, 216, 0.15);
+    color: #ffcc00 !important; /* Warna kuning untuk menu aktif */
+    font-weight: 600;
+    border-bottom: 2px solid #ffcc00; /* Garis bawah kuning */
+}
+
+/* Hover effect */
+.nav-link:hover:not(.active) {
+    color: #ccc !important;
+    transition: color 0.3s ease;
 }
 
 .btn-book {

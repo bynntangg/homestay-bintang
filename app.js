@@ -5,6 +5,52 @@ AOS.init({
     once: true
 });
 
+// Fungsi untuk menu aktif
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        // Hapus kelas active dari semua menu
+        document.querySelectorAll('.nav-link').forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        // Tambahkan kelas active ke menu yang diklik
+        this.classList.add('active');
+        
+        // Jangan lupa untuk tetap mempertahankan scroll behavior
+        const targetId = this.getAttribute('href');
+        if (targetId.startsWith('#')) {
+            e.preventDefault();
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 60, // Sesuaikan dengan tinggi navbar
+                    behavior: 'smooth'
+                });
+            }
+        }
+    });
+});
+
+// Set menu aktif berdasarkan scroll position
+window.addEventListener('scroll', function() {
+    const scrollPosition = window.scrollY;
+    
+    document.querySelectorAll('section').forEach(section => {
+        const sectionTop = section.offsetTop - 70;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${sectionId}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+});
+
 // Mobile Menu Toggle
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileMenuClose = document.getElementById('mobileMenuClose');
@@ -42,24 +88,6 @@ document.addEventListener('click', (e) => {
     if (mobileMenu.classList.contains('active') && !isClickInsideMobileMenu && !isClickOnMenuButton) {
         mobileMenu.classList.remove('active');
         document.body.style.overflow = '';
-    }
-});
-
-// Navbar scroll effect
-window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-
-    // Back to top button
-    const backToTop = document.getElementById('backToTop');
-    if (window.scrollY > 300) {
-        backToTop.classList.add('active');
-    } else {
-        backToTop.classList.remove('active');
     }
 });
 
