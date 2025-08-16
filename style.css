@@ -358,6 +358,7 @@ img {
     align-items: center;
     z-index: 100;
     margin-left: 12px;
+    display: none;
 }
 
 .mobile-menu-btn span {
