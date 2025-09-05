@@ -1665,108 +1665,91 @@ img {
         right: 1.5rem;
     }
 }
-/* Hero Section Mobile Responsive - Horizontal Layout */
-@media (max-width: 767.98px) {
-  .hero-content {
-    padding: 1.5rem;
-    margin: 0 1rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .hero-buttons {
-    display: flex !important;
-    flex-direction: row !important;
+/* Perbaikan khusus untuk tombol hero section */
+.hero-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
     flex-wrap: wrap;
-    gap: 0.75rem;
     justify-content: center;
-  }
-  
-  .hero-buttons .btn-book,
-  .hero-buttons .btn-outline-light {
-    flex: 1;
-    min-width: 140px;
-    padding: 0.75rem 1rem;
-    font-size: 0.9rem;
-    margin: 0 !important;
-    white-space: nowrap;
+    margin-top: 1.5rem;
+}
+
+.hero-buttons a {
+    /* Reset semua style yang tidak diinginkan */
     display: inline-flex !important;
-  }
-  
-  .hero-buttons .btn-book {
-    flex-grow: 1.2;
-  }
-  
-  /* Hapus style column yang mungkin dari Bootstrap */
-  .hero-buttons .d-grid {
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 0.75rem;
-  }
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
+    border: none !important;
+    background: none !important;
+    list-style: none !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    min-width: 160px;
+    text-align: center;
+}
+
+/* Tombol Pesan Sekarang */
+.hero-buttons .btn-book {
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+}
+
+.hero-buttons .btn-book:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+}
+
+/* Tombol Lihat Kamar */
+.hero-buttons .btn-outline-light {
+    background: transparent !important;
+    color: white !important;
+    border: 2px solid white !important;
+}
+
+.hero-buttons .btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    transform: translateY(-3px);
+}
+
+/* Pastikan tidak ada style checkbox yang menerapkan */
+.hero-buttons input[type="checkbox"],
+.hero-buttons label {
+    display: none !important;
+}
+
+/* Perbaikan untuk mobile */
+@media (max-width: 767.98px) {
+    .hero-buttons {
+        flex-direction: row;
+        gap: 0.75rem;
+    }
+    
+    .hero-buttons a {
+        min-width: 140px;
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 575.98px) {
-  .hero-title {
-    font-size: 1.7rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 0.95rem;
-  }
-  
-  .hero-buttons {
-    gap: 0.5rem;
-  }
-  
-  .hero-buttons .btn-book,
-  .hero-buttons .btn-outline-light {
-    min-width: 120px;
-    padding: 0.6rem 0.8rem;
-    font-size: 0.85rem;
-  }
-  
-  .hero-buttons .btn-book i,
-  .hero-buttons .btn-outline-light i {
-    margin-right: 0.3rem;
-  }
+    .hero-buttons {
+        gap: 0.5rem;
+    }
+    
+    .hero-buttons a {
+        min-width: 120px;
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
 }
 
-@media (max-width: 380px) {
-  .hero-buttons {
-    flex-direction: row !important; /* Tetap horizontal bahkan di layar kecil */
-    flex-wrap: wrap;
-  }
-  
-  .hero-buttons .btn-book,
-  .hero-buttons .btn-outline-light {
-    flex: 1;
-    min-width: 120px;
-  }
-}
-
-/* Perbaikan untuk memastikan tombol tetap horizontal */
-.hero-buttons {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.hero-buttons .btn-book,
-.hero-buttons .btn-outline-light {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-shrink: 0;
-}
-
-/* Pastikan tidak ada style yang mengubah ke vertikal */
-.hero-buttons .d-grid.gap-2.d-md-flex {
-  display: flex !important;
-  flex-direction: row !important;
-  gap: 1rem;
+/* Pastikan ikon tampil dengan benar */
+.hero-buttons a i {
+    margin-right: 0.5rem;
+    font-size: 1rem;
 }
