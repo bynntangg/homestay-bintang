@@ -553,13 +553,16 @@ img {
     margin-bottom: 1.5rem;
     position: relative;
     display: inline-block;
+    text-align: center;
+    width: 100%;
 }
 
 .section-title::after {
     content: '';
     position: absolute;
     bottom: -10px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 60px;
     height: 4px;
     background: linear-gradient(to right, var(--secondary), var(--secondary-light));
@@ -1104,13 +1107,13 @@ img {
 /* Responsive adjustments */
 @media (max-width: 767.98px) {
     .map-container {
-        height: 350px;
+        height: 300px;
     }
 }
 
 @media (max-width: 575.98px) {
     .map-container {
-        height: 300px;
+        height: 250px;
     }
 }
 
