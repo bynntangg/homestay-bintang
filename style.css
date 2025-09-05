@@ -1672,12 +1672,6 @@ img {
     margin: 0 1rem;
   }
   
-  .hero-title {
-    font-size: 2rem;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-  }
-  
   .hero-subtitle {
     font-size: 1rem;
     margin-bottom: 1.5rem;
@@ -1775,75 +1769,4 @@ img {
   display: flex !important;
   flex-direction: row !important;
   gap: 1rem;
-}
-/* Perbaikan judul hero section */
-.hero-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 1.5rem;
-    line-height: 1.1;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-
-/* Atur judul untuk layar kecil */
-@media (max-width: 1199.98px) {
-    .hero-title {
-        font-size: 3rem;
-    }
-}
-
-@media (max-width: 991.98px) {
-    .hero-title {
-        font-size: 2.5rem;
-        line-height: 1.2;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .hero-title {
-        font-size: 2.2rem;
-        line-height: 1.2;
-        margin-bottom: 1rem;
-        /* Pastikan judul maksimal 2 baris */
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-    
-    /* Perbaikan untuk highlight text */
-    .hero-title .highlight-text::after {
-        height: 8px;
-        bottom: 5px;
-    }
-}
-
-@media (max-width: 575.98px) {
-    .hero-title {
-        font-size: 1.9rem;
-        -webkit-line-clamp: 2;
-    }
-    
-    /* Solusi alternatif untuk judul yang panjang */
-    .hero-title br {
-        display: none;
-    }
-}
-
-/* Opsi: Ubah tata letak judul jika masih terlalu panjang */
-.hero-title .highlight-text {
-    white-space: nowrap;
-}
-
-/* Atau gunakan pendekatan dengan font-size yang lebih kecil */
-@media (max-width: 400px) {
-    .hero-title {
-        font-size: 1.7rem;
-    }
-    
-    .hero-title .highlight-text {
-        white-space: normal;
-    }
 }
