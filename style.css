@@ -1665,3 +1665,94 @@ img {
         right: 1.5rem;
     }
 }
+/* Hero Section Mobile Responsive - Horizontal Layout */
+@media (max-width: 767.98px) {
+  .hero-content {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+  
+  .hero-buttons .btn-book,
+  .hero-buttons .btn-outline-light {
+    flex: 1;
+    min-width: 140px;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    margin: 0 !important;
+    white-space: nowrap;
+  }
+  
+  .hero-buttons .btn-book {
+    flex-grow: 1.2; /* Tombol Pesan Sekarang sedikit lebih lebar */
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-title {
+    font-size: 1.7rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .hero-buttons {
+    gap: 0.5rem;
+  }
+  
+  .hero-buttons .btn-book,
+  .hero-buttons .btn-outline-light {
+    min-width: 120px;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .hero-buttons .btn-book i,
+  .hero-buttons .btn-outline-light i {
+    margin-right: 0.3rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .hero-buttons .btn-book,
+  .hero-buttons .btn-outline-light {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/* Perbaikan tambahan untuk tombol */
+.btn-book, .btn-outline-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Pastikan ikon tidak hilang pada ukuran kecil */
+.btn-book i, .btn-outline-light i {
+  flex-shrink: 0;
+}
