@@ -1684,7 +1684,8 @@ img {
   }
   
   .hero-buttons {
-    display: flex;
+    display: flex !important;
+    flex-direction: row !important;
     flex-wrap: wrap;
     gap: 0.75rem;
     justify-content: center;
@@ -1698,10 +1699,18 @@ img {
     font-size: 0.9rem;
     margin: 0 !important;
     white-space: nowrap;
+    display: inline-flex !important;
   }
   
   .hero-buttons .btn-book {
-    flex-grow: 1.2; /* Tombol Pesan Sekarang sedikit lebih lebar */
+    flex-grow: 1.2;
+  }
+  
+  /* Hapus style column yang mungkin dari Bootstrap */
+  .hero-buttons .d-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 0.75rem;
   }
 }
 
@@ -1733,26 +1742,37 @@ img {
 
 @media (max-width: 380px) {
   .hero-buttons {
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-direction: row !important; /* Tetap horizontal bahkan di layar kecil */
+    flex-wrap: wrap;
   }
   
   .hero-buttons .btn-book,
   .hero-buttons .btn-outline-light {
-    width: 100%;
-    min-width: unset;
+    flex: 1;
+    min-width: 120px;
   }
 }
 
-/* Perbaikan tambahan untuk tombol */
-.btn-book, .btn-outline-light {
+/* Perbaikan untuk memastikan tombol tetap horizontal */
+.hero-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-buttons .btn-book,
+.hero-buttons .btn-outline-light {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  flex-shrink: 0;
 }
 
-/* Pastikan ikon tidak hilang pada ukuran kecil */
-.btn-book i, .btn-outline-light i {
-  flex-shrink: 0;
+/* Pastikan tidak ada style yang mengubah ke vertikal */
+.hero-buttons .d-grid.gap-2.d-md-flex {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 1rem;
 }
