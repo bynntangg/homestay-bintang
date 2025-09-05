@@ -1,4 +1,3 @@
-
 :root {
     --primary: #3B82F6;
     --primary-dark: #1D4ED8;
@@ -35,10 +34,16 @@ body {
     background-color: var(--white);
     overflow-x: hidden;
     line-height: 1.6;
-    padding-top: 60px; /* Untuk mengkompensasi navbar fixed */
+    padding-top: 60px;
+    /* Untuk mengkompensasi navbar fixed */
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     line-height: 1.2;
@@ -118,7 +123,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
 }
 
 .hero-content-container {
@@ -190,12 +195,14 @@ img {
 .navbar-ocean {
     background-color: #000;
     position: fixed;
-    top: 0; /* Pastikan mentok ke atas */
+    top: 0;
+    /* Pastikan mentok ke atas */
     left: 0;
     right: 0;
     width: 100%;
     z-index: 1000;
-    padding: 10px 0; /* Sesuaikan padding sesuai kebutuhan */
+    padding: 10px 0;
+    /* Sesuaikan padding sesuai kebutuhan */
 }
 
 .navbar-ocean.scrolled {
@@ -271,9 +278,11 @@ img {
 }
 
 .nav-link.active {
-    color: #ffcc00 !important; /* Warna kuning untuk menu aktif */
+    color: #ffcc00 !important;
+    /* Warna kuning untuk menu aktif */
     font-weight: 600;
-    border-bottom: 2px solid #ffcc00; /* Garis bawah kuning */
+    border-bottom: 2px solid #ffcc00;
+    /* Garis bawah kuning */
 }
 
 /* Hover effect */
@@ -298,6 +307,12 @@ img {
     box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
     position: relative;
     overflow: hidden;
+    min-width: fit-content;
+    /* Tambahkan ini */
+    white-space: nowrap;
+    /* Mencegah text wrapping */
+    width: auto;
+    /* Pastikan tidak ada width 100% */
 }
 
 /* Efek Hover */
@@ -314,10 +329,10 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, 
-        transparent, 
-        rgba(255, 255, 255, 0.2), 
-        transparent);
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
     transform: translateX(-100%);
     transition: transform 0.6s ease;
 }
@@ -332,7 +347,7 @@ img {
         padding: 0.6rem 1rem;
         font-size: 0.9rem;
     }
-    
+
     .btn-book i {
         margin-right: 0.3rem;
     }
@@ -405,6 +420,7 @@ img {
 .mobile-menu-btn:hover::before {
     transform: scale(1);
 }
+
 .mobile-menu-overlay {
     position: fixed;
     top: 0;
@@ -417,6 +433,7 @@ img {
     visibility: hidden;
     transition: all 0.3s ease;
 }
+
 .mobile-menu-overlay.active {
     opacity: 1;
     visibility: visible;
@@ -434,6 +451,7 @@ img {
     padding: 2rem 1.5rem;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
 }
+
 .mobile-menu.active {
     right: 0;
 }
@@ -472,7 +490,7 @@ img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -484,17 +502,20 @@ img {
 .mobile-nav-item {
     margin-bottom: 0.5rem;
 }
+
 .mobile-nav-link {
     display: flex;
     align-items: center;
     padding: 0.75rem 1.5rem;
     background: rgba(255, 255, 255, 0.05);
     color: rgba(255, 255, 255, 0.9);
-    border-radius: 50px; /* Pill shape */
+    border-radius: 50px;
+    /* Pill shape */
     font-weight: 500;
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .mobile-nav-link.active {
     background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(29, 78, 216, 0.3) 100%);
     color: white;
@@ -520,6 +541,7 @@ img {
     padding: 0;
     margin: 0;
 }
+
 /* Section Styles */
 .section {
     padding: 6rem 0;
@@ -1483,9 +1505,11 @@ img {
     0% {
         box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
     }
+
     70% {
         box-shadow: 0 0 0 15px rgba(16, 185, 129, 0);
     }
+
     100% {
         box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
     }
@@ -1525,7 +1549,7 @@ img {
     .nav-menu {
         display: none;
     }
-    
+
     .mobile-menu-btn {
         display: block;
         background: none;
@@ -1535,12 +1559,12 @@ img {
         cursor: pointer;
         margin-left: 1rem;
     }
-    
+
     .nav-actions {
         display: flex;
         align-items: center;
     }
-    
+
     .btn-book {
         padding: 0.5rem 1rem;
         font-size: 0.875rem;
@@ -1552,11 +1576,11 @@ img {
     .logo-text {
         display: none;
     }
-    
+
     .btn-book span {
         display: none;
     }
-    
+
     .btn-book i {
         margin-right: 0;
     }
@@ -1639,5 +1663,23 @@ img {
         font-size: 1rem;
         bottom: 4.5rem;
         right: 1.5rem;
+    }
+}
+
+/* Perbaikan tambahan untuk navbar di mobile */
+@media (max-width: 991.98px) {
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .btn-book .btn-text {
+        display: none;
+    }
+
+    .btn-book {
+        padding: 0.6rem;
+        width: auto;
     }
 }
