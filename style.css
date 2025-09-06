@@ -1774,3 +1774,297 @@ img {
     margin-right: 0.5rem;
     font-size: 1rem;
 }
+/* Untuk layar sangat kecil */
+        @media (max-width: 480px) {
+            .contact-item {
+                padding: 10px;
+            }
+            
+            .contact-icon {
+                margin-right: 12px;
+                font-size: 16px;
+            }
+            
+            .contact-label {
+                font-size: 15px;
+            }
+            
+            .contact-text {
+                font-size: 14px;
+            }
+            
+            .operating-hours {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+ /* Perbaikan khusus untuk tampilan mobile kontak */
+        @media (max-width: 767.98px) {
+            .contact-info {
+                padding: 15px;
+                margin: 10px 0;
+                border-radius: 12px;
+                background: rgba(59, 130, 246, 0.05);
+            }
+            
+            .contact-item {
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 20px;
+                padding: 12px;
+                border-radius: 10px;
+                background: var(--white);
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            }
+            
+            .contact-item:last-child {
+                margin-bottom: 0;
+            }
+            
+            .contact-icon {
+                width: 24px;
+                height: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 15px;
+                color: var(--primary);
+                font-size: 18px;
+                flex-shrink: 0;
+                margin-top: 2px;
+            }
+            
+            .contact-details {
+                flex: 1;
+            }
+            
+            .contact-label {
+                font-weight: 600;
+                color: var(--dark-light);
+                margin-bottom: 5px;
+                font-size: 16px;
+            }
+            
+            .contact-text {
+                color: var(--gray);
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            
+            .contact-link {
+                color: var(--primary);
+                text-decoration: none;
+                transition: color 0.3s ease;
+                display: inline-block;
+                margin-top: 5px;
+            }
+            
+            .contact-link:hover {
+                color: var(--primary-dark);
+                text-decoration: underline;
+            }
+            
+            .operating-hours {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 8px;
+                flex-wrap: wrap;
+            }
+            
+            .hours-label {
+                font-weight: 500;
+                color: var(--dark-light);
+            }
+            
+            .hours-time {
+                color: var(--gray);
+            }
+            
+            /* WhatsApp button styling */
+            .whatsapp-button {
+                display: inline-flex;
+                align-items: center;
+                background: var(--success);
+                color: white;
+                padding: 10px 15px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: 500;
+                margin-top: 10px;
+                transition: all 0.3s ease;
+            }
+            
+            .whatsapp-button:hover {
+                background: #0da271;
+                transform: translateY(-2px);
+            }
+            
+            .whatsapp-button i {
+                margin-right: 8px;
+            }
+        }
+        /* Perbaikan khusus untuk tampilan mobile kontak */
+        @media (max-width: 767.98px) {
+            .contact-info {
+                padding: 15px;
+                margin: 10px 0;
+                border-radius: 12px;
+                background: rgba(59, 130, 246, 0.05);
+            }
+            
+            .contact-item {
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 20px;
+                padding: 12px;
+                border-radius: 10px;
+                background: var(--white);
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+                flex-wrap: wrap; /* Memungkinkan wrapping pada elemen */
+            }
+            
+            .contact-item:last-child {
+                margin-bottom: 0;
+            }
+            
+            .contact-icon {
+                width: 24px;
+                height: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 15px;
+                color: var(--primary);
+                font-size: 18px;
+                flex-shrink: 0;
+                margin-top: 2px;
+            }
+            
+            .contact-details {
+                flex: 1;
+                min-width: 0; /* Mencegah overflow */
+                word-break: break-word; /* Memastikan teks email tidak overlap */
+            }
+            
+            .contact-label {
+                font-weight: 600;
+                color: var(--dark-light);
+                margin-bottom: 5px;
+                font-size: 16px;
+            }
+            
+            .contact-text {
+                color: var(--gray);
+                font-size: 15px;
+                line-height: 1.5;
+                overflow-wrap: break-word; /* Memastikan email tidak overlap */
+                word-wrap: break-word; /* Untuk browser lama */
+            }
+            
+            .email-address {
+                display: block;
+                padding: 4px 0;
+                overflow-wrap: break-word;
+                word-break: break-all; /* Memastikan email break jika terlalu panjang */
+            }
+            
+            .contact-link {
+                color: var(--primary);
+                text-decoration: none;
+                transition: color 0.3s ease;
+                display: inline-block;
+                margin-top: 5px;
+                overflow-wrap: break-word;
+                word-break: break-all;
+            }
+            
+            .contact-link:hover {
+                color: var(--primary-dark);
+                text-decoration: underline;
+            }
+            
+            .operating-hours {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 8px;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+            
+            .hours-label {
+                font-weight: 500;
+                color: var(--dark-light);
+            }
+            
+            .hours-time {
+                color: var(--gray);
+            }
+            
+            /* WhatsApp button styling */
+            .whatsapp-button {
+                display: inline-flex;
+                align-items: center;
+                background: var(--success);
+                color: white;
+                padding: 10px 15px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: 500;
+                margin-top: 10px;
+                transition: all 0.3s ease;
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .whatsapp-button:hover {
+                background: #0da271;
+                transform: translateY(-2px);
+            }
+            
+            .whatsapp-button i {
+                margin-right: 8px;
+            }
+        }
+
+        /* Untuk layar sangat kecil */
+        @media (max-width: 480px) {
+            .contact-item {
+                padding: 10px;
+                flex-direction: column; /* Mengubah ke arah kolom pada layar kecil */
+            }
+            
+            .contact-icon {
+                margin-right: 0;
+                margin-bottom: 10px;
+                font-size: 16px;
+                align-self: flex-start;
+            }
+            
+            .contact-label {
+                font-size: 15px;
+            }
+            
+            .contact-text {
+                font-size: 14px;
+            }
+            
+            .operating-hours {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .email-address {
+                font-size: 13px; /* Sedikit lebih kecil untuk email */
+            }
+        }
+
+        /* Untuk layar sangat sangat kecil (contoh: iPhone 5/SE) */
+        @media (max-width: 320px) {
+            .email-address {
+                font-size: 12px; /* Lebih kecil lagi untuk layar sangat kecil */
+            }
+            
+            .contact-text {
+                font-size: 13px;
+            }
+        }
