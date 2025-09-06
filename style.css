@@ -1879,29 +1879,6 @@ img {
             .hours-time {
                 color: var(--gray);
             }
-            
-            /* WhatsApp button styling */
-            .whatsapp-button {
-                display: inline-flex;
-                align-items: center;
-                background: var(--success);
-                color: white;
-                padding: 10px 15px;
-                border-radius: 8px;
-                text-decoration: none;
-                font-weight: 500;
-                margin-top: 10px;
-                transition: all 0.3s ease;
-            }
-            
-            .whatsapp-button:hover {
-                background: #0da271;
-                transform: translateY(-2px);
-            }
-            
-            .whatsapp-button i {
-                margin-right: 8px;
-            }
         }
         /* Perbaikan khusus untuk tampilan mobile kontak */
         @media (max-width: 767.98px) {
@@ -1998,31 +1975,6 @@ img {
             
             .hours-time {
                 color: var(--gray);
-            }
-            
-            /* WhatsApp button styling */
-            .whatsapp-button {
-                display: inline-flex;
-                align-items: center;
-                background: var(--success);
-                color: white;
-                padding: 10px 15px;
-                border-radius: 8px;
-                text-decoration: none;
-                font-weight: 500;
-                margin-top: 10px;
-                transition: all 0.3s ease;
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .whatsapp-button:hover {
-                background: #0da271;
-                transform: translateY(-2px);
-            }
-            
-            .whatsapp-button i {
-                margin-right: 8px;
             }
         }
 
